@@ -5,6 +5,8 @@
 - 帶資料的 Event 單方向流動.
 - one Store to one View, and all pass by Event Callback( by pass CustomEvent with data ).
 - Data Update logic in Store and expose global fetch Data method for Controll-view(or View).
+- When app start regist View-Store in Dispatch -> User Create Action Event From View -> Store capture Event, when finished emit event to Control-View -> Control-View, capture Event, invoke Store global method fetch data, and render to View.
+
 
 ![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/diagram.png "Flow View")
 
