@@ -11,6 +11,9 @@
     <input type="text" id="InputBox" />
 </body>
 <script>
+
+
+    // like controller-view
     var Render = {
         init: function(element, Store){
             this.element = element;
@@ -25,10 +28,12 @@
             }
         }
     };
+
+
+    // like combine model + businessLogic
     function Store() {
         this._data = 0;
     }
-
     Store.prototype = {
         init: function(){
             window.addEventListener('store_set',this);
@@ -48,6 +53,9 @@
             window.dispatchEvent(new CustomEvent('render_view'));
         }
     };
+
+
+    // Like cpp's main.cpp, for regist object, store, render, etc
     var Dispatcher = {
         init: function(){
             this.displayBlock = document.getElementById('DisplayBlock');
@@ -73,6 +81,8 @@
         }
     };
 
+</script>
+<script>
     Dispatcher.init();
 </script>
 </html>
