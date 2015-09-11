@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="DisplayBlock">請在下方輸入框輸入, 這邊會隨著改變</div>
+    <br>
+    <br>
+    <br>
+    <input type="text" id="InputBox" />
+</body>
+<script>
+    var Render = {
+        init: function(element, Store){
+            this.element = element;
+            this.store = Store;
+            window.addEventListener('render_view', this);
+        },
+        handleEvent: function(e){
+            switch(e.type){
+                case 'render_view':
+                    this.element.textContent = this.store.getSomething();
+                    break;
+            }
+        }
+    };
+    function Store() {
+        this._data = 0;
+    }
+
+    Store.prototype = {
+        init: function(){
+            window.addEventListener('store_set',this);
+        },
+        handleEvent: function(e){
+            switch(e.type){
+                case 'store_set':
+                    this.setSomething(e.detail.val);
+                    break;
+            }
+        },
+        getSomething: function () {
+            return this._data; 
+        },
+        setSomething: function (val) {
+            this._data = val; 
+            window.dispatchEvent(new CustomEvent('render_view'));
+        }
+    };
+    var Dispatcher = {
+        init: function(){
+            this.displayBlock = document.getElementById('DisplayBlock');
+            this.inputBox = document.getElementById('InputBox');
+            this.inputBox.addEventListener('keyup', this);
+            this.store = new Store();
+            this.store.init();
+            Render.init(this.displayBlock, this.store);
+        },
+        handleEvent: function(e){
+            switch(e.type){
+                case 'keyup':
+                    switch(e.target){
+                        case this.inputBox:
+                            //觸發自訂事件
+                            window.dispatchEvent(new CustomEvent('store_set',
+                                {'detail':{'val':this.inputBox.value}}
+                            ));
+                            break;
+                    }
+                    break;
+            }
+        }
+    };
+
+    Dispatcher.init();
+</script>
+</html>
