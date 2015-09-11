@@ -15,3 +15,10 @@ $ http-server
 ~~~
 利用 addEventListener 的 pass object 方始來測定物件 callback, 達成 store, etc Event Callback 封裝！
 ~~~
+
+#### Flux Base on what?
+
+* HTML5 API
+- CustomEvent
+- addEventListener with obj(not dom)
+- dispatchEvent by your CustomEvent
