@@ -19,7 +19,37 @@ $ http-server
 
 #### Flux Base on what?
 
-* HTML5 API
+### HTML5 API
+
 - CustomEvent
 - addEventListener with obj(not dom)
 - dispatchEvent by your CustomEvent
+
+### Sample
+
+~~~
+var Store = function(){};
+Store.prototype = {
+    init: function(){
+        this.data = [123];
+    },
+    handleEvent: function(e){
+        console.log(e);
+        console.log(this.data);
+    }
+}
+
+var store = new Store();
+store.init();
+
+addEventListener('myEvent', store);
+
+	...
+
+
+var OnClick = function(e){
+    dispatchEvent(new CustomEvent('myEvent'), {
+        data: 1
+    });
+};
+~~~
