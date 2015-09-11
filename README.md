@@ -6,6 +6,8 @@
 - one Store to one View, and all pass by Event Callback( by pass CustomEvent with data ).
 - Data Update logic in Store and expose global fetch Data method for Controll-view(or View).
 
+![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/diagram.png "Flow View")
+
 ~~~
 $ npm install -gd http-server
 ~~~
