@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<script>
+    var Store = function(){};
+    Store.prototype = {
+        init: function(){
+            this.data = [123];
+        },
+        handleEvent: function(e){
+            console.log(e);
+            console.log(this.data);
+        }
+    }
+
+    var store = new Store();
+    store.init();
+
+    addEventListener('myEvent', store);
+</script>
+
+<script>
+    var OnClick = function(e){
+        dispatchEvent(new CustomEvent('myEvent'), {
+            data: 1
+        });
+    };
+</script>
+
+<button onclick="OnClick()">Test</button>
+</body>
+</html>
