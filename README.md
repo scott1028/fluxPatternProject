@@ -58,4 +58,6 @@ var OnClick = function(e){
         data: 1
     });
 };
+
+// var evt = document.createEvent("CustomEvent");
 ~~~

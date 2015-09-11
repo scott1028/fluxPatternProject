@@ -11,9 +11,11 @@
         init: function(){
             this.data = [123];
         },
-        handleEvent: function(e){
+        handleEvent: function(e, b){
             console.log(e);
             console.log(this.data);
+            console.log(e.detail);
+            debugger;
         }
     }
 
@@ -25,10 +27,11 @@
 
 <script>
     var OnClick = function(e){
-        dispatchEvent(new CustomEvent('myEvent'), {
-            data: 1
-        });
+        dispatchEvent(new CustomEvent('myEvent', {
+            detail: 'bring by CustomEvent#1',
+        }));
     };
+
 </script>
 
 <button onclick="OnClick()">Test</button>
