@@ -55,7 +55,7 @@ addEventListener('myEvent', store);
 
 var OnClick = function(e){
     dispatchEvent(new CustomEvent('myEvent', {
-            detail: 'bring by CustomEvent#1',
+        detail: 'bring by CustomEvent#1',
     }));
 };
 ~~~
