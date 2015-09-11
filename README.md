@@ -54,10 +54,8 @@ addEventListener('myEvent', store);
 
 
 var OnClick = function(e){
-    dispatchEvent(new CustomEvent('myEvent'), {
-        data: 1
-    });
+    dispatchEvent(new CustomEvent('myEvent', {
+            detail: 'bring by CustomEvent#1',
+    }));
 };
-
-// var evt = document.createEvent("CustomEvent");
 ~~~
