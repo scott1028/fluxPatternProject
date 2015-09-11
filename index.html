@@ -31,6 +31,7 @@
 
 
     // like combine model + businessLogic
+    // keep setter by self event's callback.
     function Store() {
         this._data = 0;
     }
@@ -45,9 +46,11 @@
                     break;
             }
         },
+        // global method for render - getter
         getSomething: function () {
             return this._data; 
         },
+        // don't invoke outside. - setter
         setSomething: function (val) {
             this._data = val; 
             window.dispatchEvent(new CustomEvent('render_view'));
@@ -63,6 +66,9 @@
             this.inputBox.addEventListener('keyup', this);
             this.store = new Store();
             this.store.init();
+
+            // create render by what's dom & what's store.
+            // keep: one store instance to bind one render(or view)
             Render.init(this.displayBlock, this.store);
         },
         handleEvent: function(e){
