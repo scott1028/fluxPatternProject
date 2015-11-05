@@ -11,6 +11,13 @@
 ![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/diagram.png "Flow View")
 
 ~~~
+1. Action: CustomEvent Instance. (可透過 JavaScript new CustomEvent(...) 產生)
+2. View: ViewControler Instance. (實作)
+3. Store: DataStore Instance. (實作)
+4. Dispatch: EventDispatcher Instance. (實作)
+~~~
+
+~~~
 $ npm install -gd http-server
 ~~~
 
