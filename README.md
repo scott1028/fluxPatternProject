@@ -11,10 +11,10 @@
 ![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/diagram.png "Flow View")
 
 ~~~
-1. Action: CustomEvent Instance. (可透過 JavaScript new CustomEvent(...) 產生)
-2. View: ViewControler Instance. (實作, 似乎可以風裝在 Dispatch 的 Init Method Scope 層)
-3. Store: DataStore Instance. (實作, 似乎可以風裝在 Dispatch 的 Init Method Scope 層)
-4. Dispatch: EventDispatcher Instance. (實作)
+1. Action: CustomEvent Instance. (可透過 JavaScript new CustomEvent 產生)
+2. View: ViewControler Instance. (實作, 似乎可以風裝在 Dispatch 的 Init Method Scope 層, 負責接收 Store 事件 & 更新畫面)
+3. Store: DataStore Instance. (實作, 似乎可以封裝在 Dispatch 的 Init Method Scope 層 & 負責接收 Action 事件 & 發送更新事件給 View 告知 Store 已被更新 & 提供 Global Method 提取當前資料)
+4. Dispatch: EventDispatcher Instance. (實作 & 負責註冊元件 & 調配分發配置)
 ~~~
 
 ~~~
@@ -63,7 +63,7 @@ store.init();
 
 addEventListener('myEvent', store);
 
-	...
+    ...
 
 
 var OnClick = function(e){
