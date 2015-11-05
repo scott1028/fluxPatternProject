@@ -7,7 +7,6 @@
 - Data Update logic in Store and expose global fetch Data method for Controll-view(or View).
 - When app start regist View-Store in Dispatch -> User Create Action Event From View -> Store capture Event, when finished emit event to Control-View -> Control-View, capture Event, invoke Store global method fetch data, and render to View.
 
-
 ![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/diagram.png "Flow View")
 
 ~~~
@@ -75,7 +74,7 @@ var OnClick = function(e){
 
 #### Advance
 
-![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/advance01.html.gif "advance01.html")
+![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/advance01.gif "advance01.html")
 
 ~~~
 // My first component.
