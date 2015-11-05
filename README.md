@@ -44,6 +44,8 @@ $ http-server
 
 ### Sample
 
+#### Basic
+
 ~~~
 var Store = function(){};
 Store.prototype = {
@@ -71,4 +73,94 @@ var OnClick = function(e){
 };
 ~~~
 
+#### Advance
+
 ![Alt text](https://raw.githubusercontent.com/scott1028/fluxPatternProject/master/advance01.html.gif "advance01.html")
+
+~~~
+// My first component.
+var cmpType01 = {
+    dispatch: function(node, initData){
+        // define store
+        this.store = function(data, suffix){
+            addEventListener('updateStore' + suffix, this);
+
+
+            //
+            this.data = data || '';
+            this.getData = function(){
+                return this.data;
+            };
+            this.handleEvent = function(e){
+                switch(e.type){
+                    case 'updateStore' + suffix:
+                        this.data = e.detail.value;
+                        dispatchEvent(new CustomEvent('storeUpdated' + suffix));
+                        break;
+                    default:
+                        console.log(e.type);
+                }
+            };
+        };
+        // define viewCtrl
+        this.viewCtrl = function(self, view, suffix){
+            addEventListener('storeUpdated' + suffix, this);
+
+
+            //
+            this.handleEvent = function(e){
+                switch(e.type){
+                    case 'storeUpdated' + suffix:
+                        view.querySelector('[grid]').textContent = self._store.getData();
+                        break;
+                    default:
+                        console.log(e.type);
+                }
+            }
+        };
+
+        // define dispatch & init & this UI user-action-callback
+        var suffix = '_' + (new Date).getTime();  // 避免相同元件互相影響
+        node.querySelector('input[inquire]').addEventListener('input', function(e){
+            // use window.dispatchEvent to broadcast Event to All DOM of this Viewport.
+            dispatchEvent(new CustomEvent('updateStore' + suffix, {
+                detail: {value: e.target.value}
+            }));
+        });
+
+
+        //
+        this._viewCtrl = new this.viewCtrl(this, node, suffix);
+        this._store = new this.store(initData, suffix);
+
+        // init pass data
+        dispatchEvent(new CustomEvent('updateStore' + suffix, {
+            detail: {value: initData}
+        }));
+        node.querySelector('input[inquire]').value = initData || '';
+    },
+};
+
+//
+var hookDom01 = document.getElementById('cmp01');
+var cmp01 = new cmpType01.dispatch(hookDom01);
+
+var hookDom02 = document.getElementById('cmp02');
+var cmp02 = new cmpType01.dispatch(hookDom02, 'test01');
+~~~
+
+~~~
+<div id="cmp01">
+    <input inquire />
+    <div grid style="background-color: #333; flex: 1; text-align: center; color: lightblue;">
+        <!-- Display Todo Data Here -->
+    </div>
+</div>
+
+<div id="cmp02">
+    <input inquire />
+    <div grid style="background-color: #333; flex: 1; text-align: center; color: lightblue;">
+        <!-- Display Todo Data Here -->
+    </div>
+</div>
+~~~
