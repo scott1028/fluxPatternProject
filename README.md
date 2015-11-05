@@ -12,7 +12,7 @@
 
 ~~~
 1. Action: CustomEvent Instance. (可透過 JavaScript new CustomEvent(...) 產生)
-2. View: ViewControler Instance. (實作)
+2. View: ViewControler Instance. (實作, 似乎可以風裝在 Dispatch 的 Init Method Scope 層)
 3. Store: DataStore Instance. (實作)
 4. Dispatch: EventDispatcher Instance. (實作)
 ~~~
