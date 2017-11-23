@@ -1,0 +1,53 @@
+{
+    "popCountries": {
+        "Europe": [
+            { "countryName": "法国", "currency": "CNY", "price": 9.99, "alpha2_code": "FR" },
+            { "countryName": "西班牙", "currency": "CNY", "price": 9.99, "alpha2_code": "EA" },
+            { "countryName": "意大利", "currency": "CNY", "price": 9.99, "alpha2_code": "IT" },
+            { "countryName": "英国", "currency": "CNY", "price": 9.99, "alpha2_code": "UK" },
+            { "countryName": "德国", "currency": "CNY", "price": 9.99, "alpha2_code": "DE" }
+        ],
+        "Americas": [
+            { "countryName": "美国", "currency": "CNY", "price": 9.99, "alpha2_code": "US" },
+            { "countryName": "加拿大", "currency": "CNY", "price": 9.99, "alpha2_code": "CA" },
+            { "countryName": "巴西", "currency": "CNY", "price": 9.99, "alpha2_code": "BR" }
+        ],
+        "Asia": [
+            { "countryName": "中国大陆", "currency": "CNY", "price": 9.99, "alpha2_code": "CN" },
+            { "countryName": "泰国", "currency": "CNY", "price": 9.99, "alpha2_code": "TH" },
+            { "countryName": "马来西亚", "currency": "CNY", "price": 9.99, "alpha2_code": "MY" },
+            { "countryName": "香港", "currency": "CNY", "price": 9.99, "alpha2_code": "HK" },
+            { "countryName": "日本", "currency": "CNY", "price": 9.99, "alpha2_code": "JP" }
+        ],
+        "Africa": [
+            { "countryName": "埃及", "currency": "CNY", "price": 243.80, "alpha2_code": "EG" },
+            { "countryName": "南非", "currency": "CNY", "price": 86.00, "alpha2_code": "ZA" }
+        ],
+        "Oceania": [
+            { "countryName": "澳大利亚", "currency": "CNY", "price": 9.99, "alpha2_code": "AU" },
+            { "countryName": "新西兰", "currency": "CNY", "price": 9.99, "alpha2_code": "NZ" }
+        ]
+    },
+    "popPackages": {
+        "Europe": [
+            {"title": "欧洲1日乐游精省数据流量包", "productId": "P3PHK04NEU02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "3HK 欧洲14日套餐", "productId": "P3PHK02N85204403", "currency": "CNY", "price": 243.80, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Americas": [
+            {"title": "美洲1日乐游精省数据流量包", "productId": "P3PHK04NAM02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "美国日租流量包", "productId": "P3PCN02N0USday02", "currency": "CNY", "price": 29.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Asia": [
+            {"title": "亚洲1日乐游精省数据流量包", "productId": "P3PHK04NAS02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "3HK 亚太4国7日流量包", "productId": "P3PHK02N85202205", "currency": "CNY", "price": 128.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Africa": [
+            {"title": "3HK 欧非15日1.5GB流量包", "productId": "P3PHK02N85204407", "currency": "CNY", "price": 243.80, "src": "/images/Oceania1@2x.png" },
+            {"title": "南非日租流量包", "productId": "P3PCN02N0ZAday01", "currency": "CNY", "price": 86.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Oceania": [
+            {"title": "大洋洲1日乐游精省数据流量包", "productId": "P3PHK04NOA02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "澳大利亚日租流量包", "productId": "P3PCN02N0AUday01", "currency": "CNY", "price": 24.10, "src": "/images/Oceania2@2x.png" }
+        ]
+    }
+}

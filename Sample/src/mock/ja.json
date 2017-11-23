@@ -1,0 +1,53 @@
+{
+    "popCountries": {
+        "Europe": [
+            { "countryName": "フランス", "currency": "CNY", "price": 9.99, "alpha2_code": "FR" },
+            { "countryName": "スペイン", "currency": "CNY", "price": 9.99, "alpha2_code": "EA" },
+            { "countryName": "イタリア", "currency": "CNY", "price": 9.99, "alpha2_code": "IT" },
+            { "countryName": "イギリス", "currency": "CNY", "price": 9.99, "alpha2_code": "UK" },
+            { "countryName": "ドイツ", "currency": "CNY", "price": 9.99, "alpha2_code": "DE" }
+        ],
+        "Americas": [
+            { "countryName": "アメリカ合衆国", "currency": "CNY", "price": 9.99, "alpha2_code": "US" },
+            { "countryName": "カナダ", "currency": "CNY", "price": 9.99, "alpha2_code": "CA" },
+            { "countryName": "ブラジル", "currency": "CNY", "price": 9.99, "alpha2_code": "BR" }
+        ],
+        "Asia": [
+            { "countryName": "中国大陆", "currency": "CNY", "price": 9.99, "alpha2_code": "CN" },
+            { "countryName": "タイ", "currency": "CNY", "price": 9.99, "alpha2_code": "TH" },
+            { "countryName": "マレーシア", "currency": "CNY", "price": 9.99, "alpha2_code": "MY" },
+            { "countryName": "香港", "currency": "CNY", "price": 9.99, "alpha2_code": "HK" },
+            { "countryName": "日本", "currency": "CNY", "price": 9.99, "alpha2_code": "JP" }
+        ],
+        "Africa": [
+            { "countryName": "エジプト", "currency": "CNY", "price": 243.80, "alpha2_code": "EG" },
+            { "countryName": "南アフリカ", "currency": "CNY", "price": 86.00, "alpha2_code": "ZA" }
+        ],
+        "Oceania": [
+            { "countryName": "オーストラリア", "currency": "CNY", "price": 9.99, "alpha2_code": "AU" },
+            { "countryName": "ニュージーランド", "currency": "CNY", "price": 9.99, "alpha2_code": "NZ" }
+        ]
+    },
+    "popPackages": {
+        "Europe": [
+            {"title": "ヨーロッパ1日間バリューデータプラン", "productId": "P3PHK04NEU02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "3HK ヨーロッパ14日プラン", "productId": "P3PHK02N85204403", "currency": "CNY", "price": 243.80, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Americas": [
+            {"title": "米州1日間バリューデータプラン", "productId": "P3PHK04NAM02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "アメリカ日割りパケットプラン", "productId": "P3PCN02N0USday02", "currency": "CNY", "price": 29.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Asia": [
+            {"title": "アジア1日間バリューデータプラン", "productId": "P3PHK04NAS02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "3HK アジア太平洋4カ国7日間パケットパック", "productId": "P3PHK02N85202205", "currency": "CNY", "price": 128.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Africa": [
+            {"title": "3HK 欧州・中東・アフリカ21カ国15日間パケットパック", "productId": "P3PHK02N85204407", "currency": "CNY", "price": 243.80, "src": "/images/Oceania1@2x.png" },
+            {"title": "南アフリカ日割りパケットプラン", "productId": "P3PCN02N0ZAday01", "currency": "CNY", "price": 86.00, "src": "/images/Oceania2@2x.png" }
+        ],
+        "Oceania": [
+            {"title": "オセアニア1日間バリューデータプラン", "productId": "P3PHK04NOA02DAY1", "currency": "CNY", "price": 9.99, "src": "/images/Oceania1@2x.png" },
+            {"title": "オーストラリア日割りパケットプラン", "productId": "P3PCN02N0AUday01", "currency": "CNY", "price": 24.10, "src": "/images/Oceania2@2x.png" }
+        ]
+    }
+}
